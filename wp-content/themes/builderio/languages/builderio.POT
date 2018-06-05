@@ -1,0 +1,898 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: builderio\n"
+"POT-Creation-Date: 2018-05-30 10:18+0530\n"
+"PO-Revision-Date: 2018-05-30 10:19+0530\n"
+"Last-Translator: \n"
+"Language-Team: abileweb\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:33
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:39
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:53
+msgid "Reply"
+msgstr ""
+
+#: comments.php:59 single.php:23
+msgid "Previous"
+msgstr ""
+
+#: comments.php:60 single.php:26
+msgid "Next"
+msgstr ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:27
+msgid "Footer Social Links Menu"
+msgstr ""
+
+#: front-page.php:8
+msgid "header-banner"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:48
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:98
+msgid "Default Header Image"
+msgstr ""
+
+#: functions.php:162 sidebar.php:13
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:164
+msgid ""
+"Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr ""
+
+#: functions.php:172
+msgid "Homepage Widget Area"
+msgstr ""
+
+#: functions.php:174
+msgid "Add widgets here to appear in your front page."
+msgstr ""
+
+#: functions.php:182
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:184 functions.php:194 functions.php:203 functions.php:212
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:192
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:201
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:210
+msgid "Footer 4"
+msgstr ""
+
+#: functions.php:234 template-parts/page/slider.php:59
+#: template-parts/page/slider.php:104 template-parts/page/slider.php:149
+#: template-parts/post/slider.php:85 widgets/widget-home-layout.php:454
+msgid "Read More"
+msgstr ""
+
+#: functions.php:308
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:309
+msgid "Collapse child menu"
+msgstr ""
+
+#: header.php:27
+msgid "page-loader"
+msgstr ""
+
+#: header.php:92
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: include/back-compat.php:33 include/back-compat.php:42
+#: include/back-compat.php:54
+#, php-format
+msgid ""
+"Builderio requires at least WordPress version 4.7. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: include/customizer.php:50
+msgid "Theme Options"
+msgstr ""
+
+#: include/customizer.php:58
+msgid "Page Loader Options"
+msgstr ""
+
+#: include/customizer.php:75
+msgid "Page Loader"
+msgstr ""
+
+#: include/customizer.php:92
+msgid "Page Loader Image"
+msgstr ""
+
+#: include/customizer.php:101
+msgid "Header Options"
+msgstr ""
+
+#: include/customizer.php:118
+msgid "Header Top"
+msgstr ""
+
+#: include/customizer.php:135
+msgid "Sticky Header"
+msgstr ""
+
+#: include/customizer.php:152
+msgid "Social Links"
+msgstr ""
+
+#: include/customizer.php:169
+msgid "facebook"
+msgstr ""
+
+#: include/customizer.php:170 include/customizer.php:188
+#: include/customizer.php:206 include/customizer.php:224
+msgid "e.g: http://example.com"
+msgstr ""
+
+#: include/customizer.php:187
+msgid "Twitter"
+msgstr ""
+
+#: include/customizer.php:205
+msgid "Instagram"
+msgstr ""
+
+#: include/customizer.php:223
+msgid "Google Plus"
+msgstr ""
+
+#: include/customizer.php:241
+msgid "Trending Post"
+msgstr ""
+
+#: include/customizer.php:259
+msgid "Title"
+msgstr ""
+
+#: include/customizer.php:272
+msgid "Select Category"
+msgstr ""
+
+#: include/customizer.php:284
+msgid "Number of Posts"
+msgstr ""
+
+#: include/customizer.php:295
+msgid "Breadcrumb Options"
+msgstr ""
+
+#: include/customizer.php:313
+msgid "Breadcrumb Type"
+msgstr ""
+
+#: include/customizer.php:318 include/customizer.php:379
+msgid "Disable"
+msgstr ""
+
+#: include/customizer.php:319
+msgid "Normal"
+msgstr ""
+
+#: include/customizer.php:328
+msgid "Footer Options"
+msgstr ""
+
+#: include/customizer.php:346
+msgid "Copyright Text"
+msgstr ""
+
+#: include/customizer.php:356
+msgid "Back To Top Options"
+msgstr ""
+
+#: include/customizer.php:374
+msgid "Active?"
+msgstr ""
+
+#: include/customizer.php:380
+msgid "Enable"
+msgstr ""
+
+#: include/customizer.php:388 include/customizer.php:406
+msgid "Post Slider"
+msgstr ""
+
+#: include/customizer.php:407
+msgid "Note: Hide Header Image If you Want Post Slider."
+msgstr ""
+
+#: include/customizer.php:426
+msgid "Number Of Slider"
+msgstr ""
+
+#: include/customizer.php:431
+msgid "2"
+msgstr ""
+
+#: include/customizer.php:432
+msgid "3"
+msgstr ""
+
+#: include/customizer.php:433
+msgid "4"
+msgstr ""
+
+#: include/customizer.php:434
+msgid "5"
+msgstr ""
+
+#: include/customizer.php:451
+msgid "Post Navigation"
+msgstr ""
+
+#: include/customizer.php:469
+msgid "Post Pagination"
+msgstr ""
+
+#: include/customizer.php:487
+msgid "Post Content"
+msgstr ""
+
+#: include/customizer.php:505
+msgid "Post Time"
+msgstr ""
+
+#: include/customizer.php:523
+msgid "Post Excerpt"
+msgstr ""
+
+#: include/customizer.php:534
+msgid "Frontpage Section"
+msgstr ""
+
+#: include/customizer.php:558
+msgid "Choose Page"
+msgstr ""
+
+#: include/customizer.php:565
+msgid "Page Slider"
+msgstr ""
+
+#: include/customizer.php:583
+msgid "Enable Slider"
+msgstr ""
+
+#: include/customizer.php:584
+msgid ""
+"Note: Hide Header Image If you Want Page Slider. How to create a slider :- "
+"First, when you create a page, Enter the page title, page descritpion or "
+"upload image to the page,if you have created a slider page, get it selected "
+"here. You can slide on only Frontpage"
+msgstr ""
+
+#: include/customizer.php:601
+msgid "Select Page One"
+msgstr ""
+
+#: include/customizer.php:619
+msgid "Select Page Two"
+msgstr ""
+
+#: include/customizer.php:637
+msgid "Select Page Three"
+msgstr ""
+
+#: include/customizer.php:656
+msgid "Slider Navigation"
+msgstr ""
+
+#: include/customizer.php:674
+msgid "Slider Pagination"
+msgstr ""
+
+#: include/customizer.php:692
+msgid "Page Content"
+msgstr ""
+
+#: include/customizer.php:710
+msgid "Slider Excerpt"
+msgstr ""
+
+#: include/customizer.php:720
+msgid "Contact Info Box"
+msgstr ""
+
+#: include/customizer.php:737
+msgid "Enable Contact Info Box"
+msgstr ""
+
+#: include/customizer.php:754
+msgid "Location Title"
+msgstr ""
+
+#: include/customizer.php:771
+msgid "Location Address"
+msgstr ""
+
+#: include/customizer.php:788
+msgid "Location Icon"
+msgstr ""
+
+#: include/customizer.php:805
+msgid "Mail Title"
+msgstr ""
+
+#: include/customizer.php:822
+msgid "Mail ID"
+msgstr ""
+
+#: include/customizer.php:839
+msgid "Mail Icon"
+msgstr ""
+
+#: include/customizer.php:856
+msgid "Contact Title"
+msgstr ""
+
+#: include/customizer.php:873
+msgid "Contact Number"
+msgstr ""
+
+#: include/customizer.php:890
+msgid "Contact Icon"
+msgstr ""
+
+#: include/customizer.php:1058
+msgid "Copyright &copy; All rights reserved."
+msgstr ""
+
+#: include/icon-functions.php:37
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: include/icon-functions.php:42
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: include/template-tags.php:51
+#, php-format
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr ""
+
+#: include/template-tags.php:65
+msgid ", "
+msgstr ""
+
+#: include/template-tags.php:84
+msgid "Categories"
+msgstr ""
+
+#: include/template-tags.php:88
+msgid "Tags"
+msgstr ""
+
+#: include/template-tags.php:116
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: index.php:14
+msgid "banner-image"
+msgstr ""
+
+#: search.php:30
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:15
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:16
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:20
+msgid "Search"
+msgstr ""
+
+#: template-parts/footer/site-info.php:19
+msgid "http://abileweb.com/"
+msgstr ""
+
+#: template-parts/footer/site-info.php:19
+#, php-format
+msgid "Designed by %s"
+msgstr ""
+
+#: template-parts/footer/widgets.php:41
+msgid "Footer"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:245
+msgid "Browse:"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:246
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:247
+msgid "Home"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:248
+msgid "404 Not Found"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:249
+msgid "Archives"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:251
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:253
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:255
+#, php-format
+msgid "Comment Page %s"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:257
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:259
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:719
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:736
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:753
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:769
+#: template-parts/header/breadcrumb.php:798
+#: template-parts/header/breadcrumb.php:825
+#: template-parts/header/breadcrumb.php:852
+#: template-parts/header/breadcrumb.php:1192
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:770
+#: template-parts/header/breadcrumb.php:826
+#: template-parts/header/breadcrumb.php:1196
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:771
+#: template-parts/header/breadcrumb.php:1200
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: template-parts/header/breadcrumb.php:799
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: template-parts/page/content-page.php:22
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post/content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/post/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/post/content-none.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/post/single.php:26
+msgid "No Comments"
+msgstr ""
+
+#: template-parts/post/single.php:28
+msgid " Comments"
+msgstr ""
+
+#: template-parts/post/single.php:30
+msgid "1 Comment"
+msgstr ""
+
+#: widgets/widget-home-layout.php:16
+msgid "Get A Quote - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:17
+msgid "Get A Quote Widget"
+msgstr ""
+
+#: widgets/widget-home-layout.php:34
+msgid "Get A Quote Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:38
+msgid "Button Label:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:43
+msgid "Quote Link:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:112
+msgid "Counter - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:113
+msgid "Counter Widget"
+msgstr ""
+
+#: widgets/widget-home-layout.php:139
+msgid "Counter 1 Title"
+msgstr ""
+
+#: widgets/widget-home-layout.php:143
+msgid "Counter 1 Count:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:147
+msgid "Counter 1 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:151
+msgid "Counter 2 Title"
+msgstr ""
+
+#: widgets/widget-home-layout.php:155
+msgid "Counter 2 Count:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:159
+msgid "Counter 2 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:163
+msgid "Counter 3 Title"
+msgstr ""
+
+#: widgets/widget-home-layout.php:167
+msgid "Counter 3 Count:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:171
+msgid "Counter 3 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:175
+msgid "Counter 4 Title"
+msgstr ""
+
+#: widgets/widget-home-layout.php:179
+msgid "Counter 4 Count:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:183
+msgid "Counter 4 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:319
+msgid "Recent Blog Post - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:320
+msgid "Recent Blog Post"
+msgstr ""
+
+#: widgets/widget-home-layout.php:338
+msgid "Post Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:342
+msgid "Post Category:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:352 widgets/widget-home-layout.php:524
+#: widgets/widget-home-layout.php:1252
+msgid "Choose Category"
+msgstr ""
+
+#: widgets/widget-home-layout.php:358 widgets/widget-home-layout.php:530
+msgid "Number Of Post: "
+msgstr ""
+
+#: widgets/widget-home-layout.php:362
+msgid "Post Excerpt: "
+msgstr ""
+
+#: widgets/widget-home-layout.php:492
+msgid "Our Works - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:493
+msgid "Our Works Post"
+msgstr ""
+
+#: widgets/widget-home-layout.php:510
+msgid "Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:514 widgets/widget-home-layout.php:1242
+msgid "Category:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:637
+msgid "Our Service - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:638
+msgid "Our Service Widget"
+msgstr ""
+
+#: widgets/widget-home-layout.php:682 widgets/widget-home-layout.php:1103
+#: widgets/widget-home-layout.php:1238
+msgid "Section Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:686
+msgid "Active Box 1:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:690
+msgid "Box 1 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:694
+msgid "Box 1 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:698
+msgid "Box 1 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:702
+msgid "Box 1 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:706
+msgid "Active Box 2:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:710
+msgid "Box 2 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:714
+msgid "Box 2 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:718
+msgid "Box 2 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:722
+msgid "Box 2 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:726
+msgid "Active Box 3:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:730
+msgid "Box 3 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:734
+msgid "Box 3 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:738
+msgid "Box 3 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:742
+msgid "Box 3 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:746
+msgid "Active Box 4:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:750
+msgid "Box 4 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:754
+msgid "Box 4 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:758
+msgid "Box 4 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:762
+msgid "Box 4 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:766
+msgid "Active Box 5:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:770
+msgid "Box 5 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:774
+msgid "Box 5 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:778
+msgid "Box 5 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:782
+msgid "Box 5 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:786
+msgid "Active Box 6:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:790
+msgid "Box 6 Title:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:794
+msgid "Box 6 Title URL:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:798
+msgid "Box 6 Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:802
+msgid "Box 6 Icon:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1084
+msgid "About Us - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1085
+msgid "About Us Widget"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1107
+msgid "Content:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1111
+msgid "Upload Signature Image:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1114 widgets/widget-home-layout.php:1125
+msgid "Upload"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1114 widgets/widget-home-layout.php:1125
+msgid "Select Image"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1114 widgets/widget-home-layout.php:1125
+msgid "Choose Image"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1115 widgets/widget-home-layout.php:1126
+msgid "Remove"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1118
+msgid "Designation:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1122
+msgid "Upload Right Side Image:"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1186 widgets/widget-home-layout.php:1196
+msgid "aboutimage"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1219
+msgid "Testimonial - Builderio"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1220
+msgid "Testimonial"
+msgstr ""
+
+#: widgets/widget-home-layout.php:1258
+msgid "Item Display: "
+msgstr ""
+
+#: widgets/widget-home-layout.php:1262
+msgid "Excerpt: "
+msgstr ""
+
+#: widgets/widget-home-layout.php:1266
+msgid "Active Navigation:"
+msgstr ""
