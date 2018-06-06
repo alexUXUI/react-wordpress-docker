@@ -1,5 +1,5 @@
-# M&K Marketing Site 2.0
-- [M&K Marketing Site 2.0](#mk-marketing-site-20)
+# React / Wordpress / Docker
+- [React / Wordpress / Docker](#react---wordpress---docker)
 - [Overview 🔎](#overview)
 - [Up and Running 🚀](#up-and-running)
   - [Prerequists](#prerequists)
@@ -15,6 +15,7 @@
     - [Add content ✍️](#add-content)
     - [API](#api)
   - [MySQL / PHPMyAdmin](#mysql---phpmyadmin)
+    - [Config DB](#config-db)
     - [Data Export / Backup 🔽](#data-export---backup)
     - [Data Import 🔼](#data-import)
 - [Docker 🐳](#docker)
@@ -119,6 +120,26 @@ PHPMyAdmin Easy Access:
 
 This will pull up the PHPMyAdmin interface on the docker container. Here you can easily interface with the MySQL database in the Docker container.
 
+### Config DB
+
+If you want to change the name of the database or configure it to run locally on a MAMP server you can change those configs in `<project root>/cms/wp-client.php` 
+
+```php
+define('DB_NAME', 'db');
+
+/** MySQL database username */
+define('DB_USER', 'root');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'root');
+
+/** MySQL hostname */
+define('DB_HOST', 'db:3306');
+define('DB_HOST', 'locahost'); // for local development
+```
+
+Note: if you change the name, make sure to update it in `<project root>/cms/docker-compose.yml`
+
 ### Data Export / Backup 🔽
 
 To make a dump of the data in the database run the following command from `<project root>/client` on you local machine:
@@ -146,7 +167,7 @@ If you want to just start the container use `docker-compose up`
 
 # TODO ✅
 ## Deploy to AWS
-  - Find a good hosting stratedgy that makes sense for our needs
+  - Find a good hosting strategy that makes sense for our needs
   - t2 micros for EC2 and RDS
 ## Set up CI / CD
   - use AWS codepipline to store our code in an S3 bucket and build it when we publish new changes
