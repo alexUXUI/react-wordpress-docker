@@ -9,11 +9,13 @@
 - [Front-End Development 🎨](#front-end-development)
   - [CSS / SCSS](#css---scss)
   - [JS / TypeScript](#js---typescript)
+  - [State Management](#state-management)
+  - [Client Side Routing](#client-side-routing)
 - [Backend / CMS Development 🗄](#backend---cms-development)
   - [Wordpress](#wordpress)
     - [Login 🔐](#login)
     - [Add content ✍️](#add-content)
-    - [API](#api)
+    - [JSON API](#json-api)
   - [MySQL / PHPMyAdmin](#mysql---phpmyadmin)
     - [Config DB](#config-db)
     - [Data Export / Backup 🔽](#data-export---backup)
@@ -30,9 +32,9 @@ This site is a headless Wordpress CMS with a React.js front end.
   - React code is in `<project root>/client`
 
 Attribution:
-  - WordPress Docker code by [Drew Dahlman](https://github.com/DrewDahlman) 
+  - WordPress Docker code by @[Drew Dahlman](https://github.com/DrewDahlman) 
       -  https://github.com/DrewDahlman/dockerize-all-the-things
-  -  React Docker code by [Michael Herman](https://github.com/mjhea0)
+  -  React Docker code by @[Michael Herman](https://github.com/mjhea0)
       -  http://mherman.org/blog/2017/12/07/dockerizing-a-react-app/#.Wxd-QlMvzBI
 
 # Up and Running 🚀
@@ -85,11 +87,19 @@ This project uses TypeScript:
 For more resources on React / TypeScript please see:
   - [Typescript / React Cheat Sheet](https://github.com/sw-yx/react-typescript-cheatsheet)
 
+## State Management
+
+Redux
+
+## Client Side Routing
+
+None at the moment. 
+
 # Backend / CMS Development 🗄
 
 ## Wordpress
 
-In order to leverage the power of the wordpress CMS, it is important to use the administartive tools it provides.
+Getting started with the administrative tools.
 
 ### Login 🔐
 - Go to `http://localhost:8080/wp-admin`
@@ -108,7 +118,7 @@ Practicing this flow of adding content it **crucial** because this will set the 
 
 Once there is some content in the CMS, we can call retrieve it from the Wordpress RESTful API. 
 
-### API
+### JSON API
 We call the API with the following query parameter:
   - http://localhost:8080/?rest_route=/wp/v2/ (meta data)
   - http://localhost:8080/?rest_route=/wp/v2/posts (all posts)
@@ -173,10 +183,10 @@ If you want to just start the container use `docker-compose up`
 
 # TODO ✅
 ## Deploy to AWS
-  - Find a good hosting strategy that makes sense for our needs
+  - Find a good hosting strategy that makes sense for current needs
   - t2 micros for EC2 and RDS
 ## Set up CI / CD
-  - use AWS codepipline to store our code in an S3 bucket and build it when we publish new changes
+  - use AWS codepipline to store code in an S3 bucket and build it when we publish new changes
   - *Or* automate the deploy any way possible - Jenkins, travis, etc. 
 ## Docker 
   - build and watch the .scss files

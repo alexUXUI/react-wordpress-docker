@@ -11,7 +11,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: blue;
 }
 
 .App-title {
@@ -20,6 +20,9 @@
 
 .App-intro {
   font-size: large;
+  &:hover {
+    background: pink;
+  }
 }
 
 @keyframes App-logo-spin {
