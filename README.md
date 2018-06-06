@@ -29,6 +29,12 @@ This site is a headless Wordpress CMS with a React.js front end.
   - Wordpress code is in `<project root>/cms`
   - React code is in `<project root>/client`
 
+Attribution:
+  - WordPress Docker code by [Drew Dahlman](https://github.com/DrewDahlman) 
+      -  https://github.com/DrewDahlman/dockerize-all-the-things
+  -  React Docker code by [Michael Herman](https://github.com/mjhea0)
+      -  http://mherman.org/blog/2017/12/07/dockerizing-a-react-app/#.Wxd-QlMvzBI
+
 # Up and Running 🚀
 
 ## Prerequisites
