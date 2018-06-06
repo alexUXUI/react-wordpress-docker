@@ -9,15 +9,19 @@
 - [Front-End Development 🎨](#front-end-development)
   - [CSS / SCSS](#css---scss)
   - [JS / TypeScript](#js---typescript)
-- [Backend / CMS Development](#backend---cms-development)
+- [Backend / CMS Development 🗄](#backend---cms-development)
   - [Wordpress](#wordpress)
-    - [Login](#login)
-    - [Add content](#add-content)
-  - [MySql / PHPMyAdmin](#mysql---phpmyadmin)
-    - [Data Export / Backup](#data-export---backup)
-    - [Data Import](#data-import)
+    - [Login 🔐](#login)
+    - [Add content ✍️](#add-content)
+    - [API](#api)
+  - [MySQL / PHPMyAdmin](#mysql---phpmyadmin)
+    - [Data Export / Backup 🔽](#data-export---backup)
+    - [Data Import 🔼](#data-import)
 - [Docker 🐳](#docker)
-- [TODO](#todo)
+- [TODO ✅](#todo)
+  - [Deploy to AWS](#deploy-to-aws)
+  - [Set up CI / CD](#set-up-ci---cd)
+  - [Docker](#docker)
 # Overview 🔎
 
 This site is a headless Wordpress CMS with a React.js front end.
@@ -27,7 +31,7 @@ This site is a headless Wordpress CMS with a React.js front end.
 # Up and Running 🚀
 
 ## Prerequists
-  - Docker Compose [Download URL](https://docs.docker.com/compose/install/)
+  - Docker Compose [URL](https://docs.docker.com/compose/install/)
 
 ## React App
 
@@ -74,18 +78,18 @@ This project uses TypeScript:
 For more resources on React / TypeScript please see:
   - [Typescript / React Cheat Sheet](https://github.com/sw-yx/react-typescript-cheatsheet)
 
-# Backend / CMS Development
+# Backend / CMS Development 🗄
 
 ## Wordpress
 
 In order to leverage the power of the wordpress CMS, it is important to use the administartive tools it provides.
 
-### Login
+### Login 🔐
 - Go to `http://localhost:8080/wp-admin`
-  - UN: root
-  - PW: root
+  - UN: 'root'
+  - PW: 'root'
 
-### Add content
+### Add content ✍️
   - Click on 'Posts' -> 'Categories'
   - Make a new category by giving it a 
     - Name
@@ -93,10 +97,11 @@ In order to leverage the power of the wordpress CMS, it is important to use the 
     - Parent Category (optional)
     - Description
 
-Practicing this flow of adding content it crucial because this will set the endpoints of our CMS as well as make connections between the data in the DB.
+Practicing this flow of adding content it **crucial** because this will set the endpoints of our CMS as well as make relationships between the data in the DB. Please make sure to leverage post `categories` and `tagging` as much as possible.
 
 Once there is some content in the CMS, we can call retrieve it from the Wordpress RESTful API. 
 
+### API
 We call the API with the following query parameter:
   - http://localhost:8080/?rest_route=/wp/v2/ (meta data)
   - http://localhost:8080/?rest_route=/wp/v2/posts (all posts)
@@ -105,16 +110,16 @@ We call the API with the following query parameter:
 For more documentation on the Wordpress V2 API please see:
   - [Wordpress API V2 Docs](https://v2.wp-api.org/)
 
-## MySql / PHPMyAdmin
+## MySQL / PHPMyAdmin
 
-The CMS is running on top of a MySQL DB. It is being built by the dockerfile directory. 
+The CMS is running on top of a MySQL DB.
 
 PHPMyAdmin Easy Access:
   - visit: [http://localhost:8181](http://localhost:8181)
 
 This will pull up the PHPMyAdmin interface on the docker container. Here you can easily interface with the MySQL database in the Docker container.
 
-### Data Export / Backup
+### Data Export / Backup 🔽
 
 To make a dump of the data in the database run the following command from `<project root>/client` on you local machine:
 
@@ -124,7 +129,7 @@ $ docker exec <container> sh -c "cd /data && wp db export --path=/app --allow-ro
 
 This will generate a `.sql` file in the `<project root>/cms/data` folder. The run.sh file in `<project root>/cms/docker`. 
 
-### Data Import
+### Data Import 🔼
 
   - Visit [http://localhost:8181](http://localhost:8181)
   - Click on 'import'
@@ -139,8 +144,13 @@ If you make a change to the `Dockerfile` make sure to run `client git:(master) �
 
 If you want to just start the container use `docker-compose up`
 
-# TODO 
-
-- Deploy to AWS
-- Set up CI / CD
-- Make docker build and watch the .scss files
+# TODO ✅
+## Deploy to AWS
+  - Find a good hosting stratedgy that makes sense for our needs
+  - t2 micros for EC2 and RDS
+## Set up CI / CD
+  - use AWS codepipline to store our code in an S3 bucket and build it when we publish new changes
+  - *Or* automate the deploy any way possible - Jenkins, travis, etc. 
+## Docker 
+  - build and watch the .scss files
+  - Consolidate to one docker-compose.yml at root of project that builds both the react app and the wordpress cms
