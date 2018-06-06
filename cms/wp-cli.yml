@@ -13,7 +13,7 @@ core config:
     define('WP_DEBUG_DISPLAY', true);
 core install:
   url: localhost:8080
-  title: db
+  title: 
   admin_user: root
   admin_password: root
   admin_email: admin@db.com

@@ -1,5 +1,28 @@
 version: '2'
+
 services:
+
+  db:
+    container_name: db
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 8181:80
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+  
   wordpress:
     build:
       context: .
@@ -15,13 +38,6 @@ services:
       DB_NAME: db
       DB_PASS: root # must match below
       WP_DEBUG: 'true'
-  db:
-    image: mysql:5.7
-    ports:
-      - 3306:3306
-    volumes:
-      - data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
+
 volumes:
   data: {}

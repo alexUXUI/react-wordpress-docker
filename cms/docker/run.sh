@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ADMIN_EMAIL=${ADMIN_EMAIL:-"admin@${DB_NAME}.com"}
+WP_SITE_NAME=${'Miner & Kasch'}
 DB_NAME=${DB_NAME:-'wordpress'}
 DB_PASS=${DB_PASS:-'root'}
 DB_PREFIX=${DB_PREFIX:-'wp_'}
@@ -17,15 +18,6 @@ ERROR () {
   echo -e "\n=> $(tput -T xterm setaf 1)$(tput -T xterm bold)ERROR$(tput -T xterm sgr 0) (Line $1): $2.";
   exit 1;
 }
-
-# printf "=> \n\n\n\nGoing to run the react app\n\n\n\n"
-
-# exec docker run -it \
-#   -v ${PWD}:/usr/src/app \
-#   -v /usr/src/app/node_modules \
-#   -p 3000:3000 \
-#   --rm \
-#   react-ui
 
 # Configure wp-cli
 # ----------------
@@ -45,7 +37,7 @@ core config:
     define('WP_DEBUG_DISPLAY', ${WP_DEBUG_DISPLAY,,});
 core install:
   url: $([ "$AFTER_URL" ] && echo "$AFTER_URL" || echo localhost:8080)
-  title: $DB_NAME
+  title: $WP_SITE_NAME
   admin_user: root
   admin_password: $DB_PASS
   admin_email: $ADMIN_EMAIL
@@ -56,7 +48,7 @@ EOF
 # Download WordPress
 # ------------------
 if [ ! -f /app/wp-settings.php ]; then
-  printf "=> Downloading wordpress... "
+  printf "=>\n\n Downloading wordpress... \n\n"
   chown -R www-data:www-data /app /var/www/html
   sudo -u www-data wp core download >/dev/null 2>&1 || \
     ERROR $LINENO "Failed to download wordpress"
@@ -66,7 +58,7 @@ fi
 
 # Wait for MySQL
 # --------------
-printf "=> Waiting for MySQL to initialize... \n"
+printf "=>\n\n Waiting for MySQL to initialize... \n\n"
 while ! mysqladmin ping --host=db --password=$DB_PASS --silent; do
   sleep 1
 done
@@ -81,7 +73,7 @@ printf "\t%s\n" \
 # wp-config.php
 # -------------
 if [ ! -f /app/wp-config.php ]; then
-printf "=> Generating wp.config.php file... "
+printf "=>\n\n Generating wp.config.php file... \n\n"
 #rm -f /app/wp-config.php
 sudo -u www-data wp core config >/dev/null 2>&1 || \
   ERROR $LINENO "Could not generate wp-config.php file"
@@ -90,12 +82,12 @@ fi
 
 # Setup database
 # --------------
-printf "=> Create database '%s'... " "$DB_NAME"
+printf "=>\n\n Create database '%s'... \n\n" "$DB_NAME"
 if [ ! "$(wp core is-installed --allow-root >/dev/null 2>&1 && echo $?)" ]; then
   sudo -u www-data wp db create >/dev/null 2>&1 || \
     ERROR $LINENO "Database creation failed"
   printf "Done!\n"
-
+  printf "\n\n\n\nYO GAWD\n\n\n\n"
   # If an SQL file exists in /data => load it
   if [ "$(stat -t /data/*.sql >/dev/null 2>&1 && echo $?)" ]; then
     DATA_PATH=$(find /data/*.sql | head -n 1)
@@ -106,25 +98,25 @@ if [ ! "$(wp core is-installed --allow-root >/dev/null 2>&1 && echo $?)" ]; then
 
     # If SEARCH_REPLACE is set => Replace URLs
     if [ "$SEARCH_REPLACE" != false ]; then
-      printf "=> Replacing URLs... "
+      printf "=>\n\n Replacing URLs... \n\n"
       REPLACEMENTS=$(sudo -u www-data wp search-replace "$BEFORE_URL" "$AFTER_URL" \
         --no-quiet --skip-columns=guid | grep replacement) || \
         ERROR $((LINENO-2)) "Could not execute SEARCH_REPLACE on database"
       echo -ne "$REPLACEMENTS\n"
     fi
   else
-    printf "=> No database backup found. Initializing new database... "
+    printf "=>\n\n No database backup found. Initializing new database... \n\n"
     sudo -u www-data wp core install >/dev/null 2>&1 || \
       ERROR $LINENO "WordPress Install Failed"
     printf "Done!\n"
   fi
 else
-  printf "Already exists!\n"
+  printf "\n\n Already exists! \n\n"
 fi
 
 # Filesystem Permissions
 # ----------------------
-printf "=> Adjusting filesystem permissions... "
+printf "=>\n\n Adjusting filesystem permissions... \n\n"
 groupadd -f docker && usermod -aG docker www-data
 find /app -type d -exec chmod 755 {} \;
 find /app -type f -exec chmod 644 {} \;
