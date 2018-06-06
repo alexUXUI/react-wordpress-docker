@@ -5,6 +5,7 @@
   - [Prerequists](#prerequists)
   - [React App](#react-app)
   - [Wordpress CMS](#wordpress-cms)
+    - [Services](#services)
 - [Front-End Development 🎨](#front-end-development)
   - [CSS / SCSS](#css---scss)
   - [JS / TypeScript](#js---typescript)
@@ -16,6 +17,7 @@
     - [Data Export / Backup](#data-export---backup)
     - [Data Import](#data-import)
 - [Docker 🐳](#docker)
+- [TODO](#todo)
 # Overview 🔎
 
 This site is a headless Wordpress CMS with a React.js front end.
@@ -34,7 +36,7 @@ This site is a headless Wordpress CMS with a React.js front end.
   $ docker-compose up 
 ```
 
-Once you have the react app running in the docker container, you can visit the site at `http:localhost:3000`
+Visit the react app at [http://localhost:3000](http://localhost:3000)
 
 ## Wordpress CMS
 
@@ -43,18 +45,17 @@ Once you have the react app running in the docker container, you can visit the s
   $ docker-compose up 
 ```
 
-This compose file will launch a couple docker services:
-  - Wordpress website: `http://localhost:8080`
-  - PHPMyAdmin: `http://localhost:8181`
+### Services
+  - Wordpress website: [http://localhost:8080](http://localhost:8080)
+  - PHPMyAdmin: [http://localhost:8181](http://localhost:8181)
 
 # Front-End Development 🎨
 
 ## CSS / SCSS
 
-Start the node-sass process to work on the CSS. 
+Start the node-sass process to work on the app styles. 
 
-To start the process, make sure to open a new shell process on you local machine.
-(would be great if we could make docker build and watch the .scss files)
+To start the process, make open a new shell process on you local machine.
 
 ```shell
   $ cd <project root>/client
@@ -109,7 +110,7 @@ For more documentation on the Wordpress V2 API please see:
 The CMS is running on top of a MySQL DB. It is being built by the dockerfile directory. 
 
 PHPMyAdmin Easy Access:
-  - visit: `http://localhost:8181`
+  - visit: [http://localhost:8181](http://localhost:8181)
 
 This will pull up the PHPMyAdmin interface on the docker container. Here you can easily interface with the MySQL database in the Docker container.
 
@@ -125,7 +126,7 @@ This will generate a `.sql` file in the `<project root>/cms/data` folder. The ru
 
 ### Data Import
 
-  - Visit `http://localhost:8181` 
+  - Visit [http://localhost:8181](http://localhost:8181)
   - Click on 'import'
   - Upload the generated .sql file in `<project root>/cms/data
   - Press the 'Go" button
@@ -137,3 +138,9 @@ This should load the sql file into the MySQL databse.
 If you make a change to the `Dockerfile` make sure to run `client git:(master) ✗ docker-compose up -d --build` to rebuild the container.
 
 If you want to just start the container use `docker-compose up`
+
+# TODO 
+
+- Deploy to AWS
+- Set up CI / CD
+- Make docker build and watch the .scss files
