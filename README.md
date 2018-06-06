@@ -2,7 +2,7 @@
 - [React / Wordpress / Docker](#react---wordpress---docker)
 - [Overview 🔎](#overview)
 - [Up and Running 🚀](#up-and-running)
-  - [Prerequists](#prerequists)
+  - [Prerequisites](#prerequisites)
   - [React App](#react-app)
   - [Wordpress CMS](#wordpress-cms)
     - [Services](#services)
@@ -31,7 +31,7 @@ This site is a headless Wordpress CMS with a React.js front end.
 
 # Up and Running 🚀
 
-## Prerequists
+## Prerequisites
   - Docker Compose [URL](https://docs.docker.com/compose/install/)
 
 ## React App
