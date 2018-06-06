@@ -85,11 +85,12 @@ This project uses TypeScript:
   - [TypeScript Foundation](https://www.typescriptlang.org/)
 
 For more resources on React / TypeScript please see:
-  - [Typescript / React Cheat Sheet](https://github.com/sw-yx/react-typescript-cheatsheet)
+  - [Typescript / React Cheat Sheet](https://github.com/sw-yx/react-typescript-cheatsheet
+  - https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935
 
 ## State Management
 
-Redux
+Redux + thunk
 
 ## Client Side Routing
 
@@ -189,5 +190,6 @@ If you want to just start the container use `docker-compose up`
   - use AWS codepipline to store code in an S3 bucket and build it when we publish new changes
   - *Or* automate the deploy any way possible - Jenkins, travis, etc. 
 ## Docker 
+  - Set up .env files for docker to pull from
   - build and watch the .scss files
   - Consolidate to one docker-compose.yml at root of project that builds both the react app and the wordpress cms

@@ -7,7 +7,7 @@ interface IRequest {
 }
 
 export const getServices = () => {
-  return (dispatch: function) => {
+  return (dispatch: any) => {
     const REQUEST_URL = `http://localhost:8080/?rest_route=/wp/v2/posts`;
 
     const REQUEST: IRequest = {
@@ -18,7 +18,7 @@ export const getServices = () => {
       mode: 'cors',
     };
 
-    return axios(REQUEST_URL, REQUEST).then((response: object) => {
+    return axios(REQUEST_URL, REQUEST).then((response: any) => {
       if (response.status >= 200 && response.status < 300) {
         dispatch({
           payload: response,
