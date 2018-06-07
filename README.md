@@ -54,7 +54,7 @@ Visit the react app at [http://localhost:3000](http://localhost:3000)
 ## Wordpress CMS
 
 ```shell
-  $ cd client
+  $ cd cms
   $ docker-compose up 
 ```
 
@@ -66,22 +66,20 @@ Visit the react app at [http://localhost:3000](http://localhost:3000)
 
 ## CSS / SCSS
 
-Start the node-sass process to work on the app styles. 
-
-To start the process, make open a new shell process on you local machine.
+Start the node-sass process. 
 
 ```shell
   $ cd <project root>/client
   $ yarn run watch:sass
 ```
 
-This will watch all the files in `client/src/styles/scss` and build them into .css files in `client/src/styles/css` when there are changes. 
+This will watch all the files in `client/src/styles/scss` and build them into `.css` files in `client/src/styles/css`. 
 
-When it comes to writing styles, please make sure to use SASS variables for the styling of the website. These can be found in `client/src/styles/scss/theme/variables` 
+SASS variables are in `client/src/styles/scss/theme/variables` 
 
 ## JS / TypeScript
 
-This project uses TypeScript: 
+TypeScript: 
   - [TypeScript Foundation](https://www.typescriptlang.org/)
 
 For more resources on React / TypeScript please see:
@@ -117,10 +115,10 @@ Getting started with the administrative tools.
 
 Practicing this flow of adding content it **crucial** because this will set the endpoints of our CMS as well as make relationships between the data in the DB. Please make sure to leverage post `categories` and `tagging` as much as possible.
 
-Once there is some content in the CMS, we can call retrieve it from the Wordpress RESTful API. 
+Once there is some content in the CMS, we can retrieve it from the Wordpress RESTful API. 
 
 ### JSON API
-We call the API with the following query parameter:
+Call the API: (this is not the right way to do so. See: TODO)
   - http://localhost:8080/?rest_route=/wp/v2/ (meta data)
   - http://localhost:8080/?rest_route=/wp/v2/posts (all posts)
   - http://localhost:8080/?rest_route=/wp/v2/categories (all categories)
@@ -152,14 +150,12 @@ define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'db:3306');
-define('DB_HOST', 'locahost'); // for local development
+define('DB_HOST', 'localhost'); // for local development
 ```
-
-Note: if you change the name, make sure to update it in `<project root>/cms/docker-compose.yml`
 
 ### Data Export / Backup 🔽
 
-To make a dump of the data in the database run the following command from `<project root>/client` on you local machine:
+To make a dump of the data in the database run the following command from `<project root>/cms` on you local machine:
 
 ```shell
 $ docker exec <container> sh -c "cd /data && wp db export --path=/app --allow-root" 
@@ -178,7 +174,7 @@ This should load the sql file into the MySQL databse.
 
 # Docker 🐳
 
-If you make a change to the `Dockerfile` make sure to run `client git:(master) ✗ docker-compose up -d --build` to rebuild the container.
+If you make a change to the `Dockerfile` make sure to run `docker-compose up -d --build` to rebuild the container.
 
 If you want to just start the container use `docker-compose up`
 
